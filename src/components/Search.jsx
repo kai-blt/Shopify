@@ -1,14 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Search = (props) => {
   const [formValues, setFormValues] = useState({search: ""});
 
-  const handleChange = (e) => {
+  useEffect(() => {
+    const timer = setTimeout(() => console.log(formValues), 500);
+    return () => clearTimeout(timer);
+  }, [formValues]);
+
+  const handleChange = (e) => { 
     setFormValues({
       ...formValues,
       [e.target.name]: e.target.value
     })
   }
+
+  
+
 
   return (
     <div className="bg-green-900 fixed w-full">
@@ -24,6 +32,7 @@ const Search = (props) => {
               <input
                 type="text"
                 name="search"
+                id="search"
                 value={formValues.search}
                 className="rounded-sm px-2 py-1 text-gray-900"
                 onChange={handleChange}
