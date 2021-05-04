@@ -3,11 +3,11 @@ import {Search, Results, Nominations} from './components'
 
 function App() {
   return (
-    <div class="container mx-auto">
-      <header>
+    <div>
+      <header className="pb-44">
         <Search />
       </header>
-      <section>
+      <section className="px-4">
         <Results />
         <Nominations />
       </section>
