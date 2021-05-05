@@ -6,7 +6,6 @@ const Nominations = (props) => {
   
   return (
     <div className="bg-green-900 w-full border-b-4 border-gray-900 text-white">
-      <p className="pl-4 font-bold">My Nominations:</p>
       <div className="flex xs:flex-col sm:flex-row md:flex-row lg:flex-row">
         {nominated.length > 0
           ? nominated.map(n => {

@@ -13,7 +13,7 @@ const NominatedThumb = (props) => {
   };
 
   return(
-    <div className="relative p-1 sm:p-2 md:p-4 lg:p-6 text-xs sm:text-sm md:text-md text-yellow-200 text-shadow font-bold bg-cover rounded-md" style={{"backgroundImage": `url(${Poster})`}}>
+    <div className="relative p-1 sm:p-2 md:p-4 lg:p-6 text-xs sm:text-sm md:text-md text-white font-bold border-2  border-green-900 bg-cover bg-green-700 rounded-t-md">
       <p>{Title}</p>
       <button onClick={() => remove(movie)} class="w-6 h-6 absolute top-0 right-0 rounded-full border-2 border-white bg-red-700 shadow-2xlg text-sm  transition duration-400 ease-in-out transform hover:-translate-y-0.5 hover:scale-102 hover:bg-gray-700">X</button>
     </div>    
