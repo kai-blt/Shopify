@@ -51,7 +51,7 @@ const Search = (props) => {
     </div>
     <div className="flex flex-row justify-between">
       <div className="p-4 text-lg">
-        <span className="font-bold">{movies.length || []} results</span> for "{formValues.search}"...
+        {movies ?  <div><span className="font-bold">{movies.length} results</span> for "{formValues.search}"...</div> : null}  
       </div>      
     </div>
     </>

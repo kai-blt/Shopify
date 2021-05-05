@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 function App() {
   const movies = useSelector(state => state.search.movies);
-
+  
   return (
     <div>
       <header className="pb-2">
