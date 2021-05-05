@@ -1,22 +1,23 @@
 import { useState, useEffect } from 'react';
+import { searchActions } from '../state/ducks'
+import { useDispatch } from 'react-redux';
 
 const Search = (props) => {
   const [formValues, setFormValues] = useState({search: ""});
 
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    const timer = setTimeout(() => console.log(formValues), 500);
+    const timer = setTimeout(() => dispatch(searchActions.searchMovies(formValues.search)), 1000);
     return () => clearTimeout(timer);
-  }, [formValues]);
+  }, [formValues, dispatch]);
 
   const handleChange = (e) => { 
     setFormValues({
       ...formValues,
       [e.target.name]: e.target.value
-    })
+    });
   }
-
-  
-
 
   return (
     <div className="bg-green-900 fixed w-full">
@@ -42,6 +43,6 @@ const Search = (props) => {
       </div>
     </div>
   )
-}
+};
 
-export default Search
+export default Search;
