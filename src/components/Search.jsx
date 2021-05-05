@@ -29,7 +29,7 @@ const Search = (props) => {
           <h1 className="text-3xl">Movie Search</h1>
         </div>
          <div>
-          <form>
+          <form onSubmit={(e) =>e.preventDefault()}>
               <input
                 type="text"
                 name="search"

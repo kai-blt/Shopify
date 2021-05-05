@@ -9,7 +9,7 @@ function App() {
       <header className="pb-44">
         <Search />
       </header>
-      <section>
+      <section className="ml-4">
         <Results movies={movies} />
         <Nominations />
       </section>
