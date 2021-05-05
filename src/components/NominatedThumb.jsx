@@ -3,7 +3,7 @@ import { nominateActions } from '../state/ducks'
 
 
 const NominatedThumb = (props) => {
-  const { Title, Poster, movie } = props;
+  const { Title, movie } = props;
   const movies = useSelector(state => state.nominated.movies)
   const dispatch = useDispatch();
 
