@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div>
-      <header className="pb-44">
+      <header className="pb-2">
         <Search />
       </header>
       <section className="ml-4">

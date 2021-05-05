@@ -5,7 +5,7 @@ const Results = (props) => {
 
   console.log(movies)
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap justify-evenly">
       {movies 
         ? movies.map(m => {
           const { Title, Year, Poster, imdbID } = m;
