@@ -51,7 +51,7 @@ const searchReducer = (state = searchInitialState, action) => {
   case SEARCH_SUCCESS:
     return {
     ...state,
-    movies: action.payload,
+    movies: [...action.payload],
     status: 'search/success',
     error: ''
     };
