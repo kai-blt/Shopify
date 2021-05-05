@@ -1,13 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { searchActions } from '../state/ducks'
+import { useDispatch } from 'react-redux';
 
 const Search = (props) => {
   const [formValues, setFormValues] = useState({search: ""});
 
-  const handleChange = (e) => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const timer = setTimeout(() => dispatch(searchActions.searchMovies(formValues.search)), 1000);
+    return () => clearTimeout(timer);
+  }, [formValues, dispatch]);
+
+  const handleChange = (e) => { 
     setFormValues({
       ...formValues,
       [e.target.name]: e.target.value
-    })
+    });
   }
 
   return (
@@ -24,6 +33,7 @@ const Search = (props) => {
               <input
                 type="text"
                 name="search"
+                id="search"
                 value={formValues.search}
                 className="rounded-sm px-2 py-1 text-gray-900"
                 onChange={handleChange}
@@ -33,6 +43,6 @@ const Search = (props) => {
       </div>
     </div>
   )
-}
+};
 
-export default Search
+export default Search;

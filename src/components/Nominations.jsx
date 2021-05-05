@@ -4,6 +4,6 @@ const Nominations = (props) => {
       Nominations
     </div>
   )
-}
+};
 
-export default Nominations
+export default Nominations;
