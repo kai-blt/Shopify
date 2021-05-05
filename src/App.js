@@ -1,4 +1,4 @@
-import { Search, Results, Nominations } from './components';
+import { Search, Results } from './components';
 import { useSelector } from 'react-redux';
 
 function App() {
@@ -6,12 +6,11 @@ function App() {
 
   return (
     <div>
-      <header className="pb-44">
+      <header className="pb-2">
         <Search />
       </header>
-      <section>
-        <Results movies={movies} />
-        <Nominations />
+      <section className="ml-4">
+        <Results movies={movies} />      
       </section>
     </div>
   );

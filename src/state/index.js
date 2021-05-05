@@ -2,7 +2,7 @@ import { combineReducers, createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
 //Import Ducks
-import { searchReducer } from './ducks';
+import { searchReducer, nominateReducer } from './ducks';
 
 export const middlewares = [thunk];
 
@@ -11,6 +11,7 @@ export const createStoreWithMiddleware = applyMiddleware(...middlewares)(createS
 //Combine Slices of State
 export const rootReducer = combineReducers({
   search: searchReducer,
+  nominated: nominateReducer
 });
 
 export const store = createStoreWithMiddleware(
